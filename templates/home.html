@@ -1,3 +1,23 @@
-<h1>
-    hello world
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mileage Prediction</title>
+</head>
+
+<body>
+<div class="login">
+    <h1>Mileage Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <input type="text" name="Acceleration" placeholder="Acceleration" required="required"><br>
+        <input type="text" name="Displacement" placeholder="Displacement" required="required"><br>
+        <input type="text" name="Horsepower" placeholder="Horsepower" required="required"><br>
+        <input type="text" name="Weight" placeholder="Weight" required="required"><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+</div>
+<p>{{ prediction_text }}</p>
+</body>
+</html>
